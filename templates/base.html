@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Mi Biblioteca Personal{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <nav>
+        <a href="{{ url_for('index') }}">Biblioteca</a> |
+        <a href="{{ url_for('add_book') }}">Agregar Libro</a> |
+        <a href="{{ url_for('search_book_route') }}">Buscar Libros</a>
+    </nav>
+    <div class="content">
+        {% block content %}
+        {% endblock %}
+    </div>
+    <footer>
+        <p>&copy; 2025 Mi Biblioteca Personal</p>
+    </footer>
+</body>
+</html>

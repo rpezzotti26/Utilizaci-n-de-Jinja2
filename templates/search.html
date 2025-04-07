@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    {% extends 'base.html' %}
+
+{% block title %}Buscar Libros{% endblock %}
+
+{% block content %}
+    <h1>Buscar Libros</h1>
+    <form method="POST">
+        <div>
+            <label for="query">Buscar por título, autor o género:</label>
+            <input type="text" id="query" name="query" required>
+        </div>
+        <button type="submit">Buscar</button>
+    </form>
+{% endblock %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buscar Libros</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Buscar Libros</h1>
+    <form method="POST">
+        <div>
+            <label for="query">Buscar por título, autor o género:</label>
+            <input type="text" id="query" name="query" required>
+        </div>
+        <button type="submit">Buscar</button>
+    </form>
+    <p><a href="{{ url_for('index') }}">Volver a la Biblioteca</a></p>
+</body>
+</html>
